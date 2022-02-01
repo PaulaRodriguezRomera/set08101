@@ -12,7 +12,7 @@ function buildQuiz(){
     const output = []; 
 
     //FOR EACH QUESTION 
-    //CONTINUAR CON EL FOR EACH LOOP 
+    //CONTINUAR CON EL FOR EACH LOOP + PRIMERO ENTENDER CADA LINEA ANTES DE SEGUIR ADELANTE 
     // myQuestions.forEach(
     //     (currentQuestion, questionNumber) => {
     //         const answers = []; //TO STORE THE ANSWERS 
