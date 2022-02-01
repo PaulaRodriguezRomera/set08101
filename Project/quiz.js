@@ -6,7 +6,19 @@ const submitButton = document.getElementById('submit');
 
 
 //FUNCTION TO BUILD THE QUIZ 
-function buildQuiz(){}
+function buildQuiz(){
+
+    //TO STORE THE HTML OUTPUT 
+    const output = []; 
+
+    //FOR EACH QUESTION 
+    //CONTINUAR CON EL FOR EACH LOOP 
+    // myQuestions.forEach(
+    //     (currentQuestion, questionNumber) => {
+    //         const answers = []; //TO STORE THE ANSWERS 
+
+    //     }); 
+}
 
 //FUNCTION TO SHOW RESULTS 
 function showResults(){}
