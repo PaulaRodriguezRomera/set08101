@@ -1,10 +1,3 @@
-//SELECT HTML ELEMENTS AND STORE REFERENCES IN VARIABLES 
-
-const quizContainer = document.getElementById('quiz'); 
-const resultsContainer = document.getElementById('results'); 
-const submitButton = document.getElementById('submit'); 
-
-
 //FUNCTION TO BUILD THE QUIZ 
 function buildQuiz(){
 
@@ -12,16 +5,43 @@ function buildQuiz(){
     const output = []; 
 
     //FOR EACH QUESTION 
-    //CONTINUAR CON EL FOR EACH LOOP + PRIMERO ENTENDER CADA LINEA ANTES DE SEGUIR ADELANTE 
-    // myQuestions.forEach(
-    //     (currentQuestion, questionNumber) => {
-    //         const answers = []; //TO STORE THE ANSWERS 
+    myQuestions.forEach(
+        (currentQuestion, questionNumber) => {
 
-    //     }); 
+           //TO STORE THE ANSWERS 
+            const answers = []; 
+
+            //FOR EACH AVAILABLE ANSWER 
+            for(letter in currentQuestion.answers){
+
+            //HTML RADIO BUTTON 
+            answers.push(
+                `<label>
+                  <input type="radio" name="question${questionNumber}" value="${letter}">
+                  ${letter} :
+                  ${currentQuestion.answers[letter]}
+                </label>`
+              );
+            }
+
+     //ADD QUESTION AND ITS ANSWER TO THE OUTPUT 
+     output.push(
+         `<div class="question"> ${currentQuestion.question}</div> 
+         <div class="answers"> ${answers.join('')}</div>`
+     ); 
+   }
+);  
+quizContainer.innerHTML = output.join(''); 
 }
 
 //FUNCTION TO SHOW RESULTS 
 function showResults(){}
+
+//SELECT HTML ELEMENTS AND STORE REFERENCES IN VARIABLES 
+
+const quizContainer = document.getElementById('quiz'); 
+const resultsContainer = document.getElementById('results'); 
+const submitButton = document.getElementById('submit'); 
 
 //CALL BUILD FUNCTION 
 buildQuiz(); 
