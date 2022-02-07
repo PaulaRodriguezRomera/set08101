@@ -1,10 +1,10 @@
 .flex-container {
     padding: 0;
-    margin: 0;
+    margin: 10;
     list-style: none;
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: space-around;
+    display: flex; /* sets the display property to flex */
+    flex-flow: row wrap; /* set both flex-direction and flex-wrap properties */
+    justify-content: space-around; /* get the flex layout to add space before, between, and after elements */
 }
 
 .flex-item {
@@ -19,4 +19,55 @@
     font-weight: bold;
     font-size: 3em;
     text-align: center;
+}
+
+/* sets up our display and flex flow */
+.wrapper { 
+    display: flex; 
+    flex-flow: row wrap;
+    font-weight: bold; 
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 10px; 
+    flex: 1 100%; 
+}
+
+.header {
+    background-color: tomato;
+}
+
+.footer {
+    background-color: lightgreen;
+}
+
+.main {
+    text-align: left;
+    background: deepskyblue; 
+}
+
+.aside-1 {
+    background-color: gold;
+}
+
+.aside-2 {
+    background-color: hotpink;
+}
+
+/* enables to apply rules based upon the width of the screen */
+@media all and (min-width: 600px){
+    .aside {flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+    .main { flex: 3 0px; }
+    .aside-1 { order: 1; }
+    .main { order: 2; }
+    .aside-2 { order: 3; }
+    .footer { order: 4; }
+}
+
+body {
+    padding:  2em;
 }
