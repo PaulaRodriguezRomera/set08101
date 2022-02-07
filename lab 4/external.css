@@ -1,5 +1,14 @@
+h1 {
+    text-align: center;
+    text-decoration: purple;
+}
+
+body {
+    background-color: thistle;
+}
+
 #important {
-    background-color: olivedrab;
+    background-color: rgba(0, 128, 0, 0.212);
     text-decoration: orchid;
     text-align: center;
 }
