@@ -78,7 +78,7 @@ body {
     background-color: tomato;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-end; /*to get the nav bar to appear to the right of the screen */
 }
 
 .navigation a {
@@ -113,4 +113,21 @@ body {
 .navigation li:last-of-type a {
     border-bottom: none;
 }
+}
+
+.grid-container {
+    display: grid; /*with the display we specify that we want to manage the organisation of the containers content using the grid layout*/
+    grid-template-columns: auto auto auto; /*to specify that we want three columns using the auto value*/
+    background-color: tomato;
+    padding: 20px; 
+    margin-top: 20px;
+
+}
+
+.grid-item {
+    background-color: rgb(255, 255, 255, 0.8);
+    border: 1px solid rgba(0,0,0,0.4);
+    padding: 10px;
+    font-size: 30px; 
+    text-align: center; 
 }
