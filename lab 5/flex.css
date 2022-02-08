@@ -131,3 +131,52 @@ body {
     font-size: 30px; 
     text-align: center; 
 }
+
+.grid-lines {
+    display: grid; 
+    grid-template-columns: auto auto auto; 
+    grid-gap: 10px; 
+    background-color: tomato;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.grid-lines > div { /* > will select all the children included in that container */
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20 px 0;
+    font-size: 30px; 
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+.item2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+
+.item3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.item5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.item7 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
